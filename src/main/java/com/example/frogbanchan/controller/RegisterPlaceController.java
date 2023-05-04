@@ -23,7 +23,7 @@ public class RegisterPlaceController {
 		this.frogbanchan = frogbanchan;
 	}
 
-	@RequestMapping("/place/register.do")
+// @RequestMapping("/place/register.do")
 //	public ModelAndView handleRequest(
 //			@RequestParam("placeId") String placeId,
 //			@RequestParam("password") String password,
