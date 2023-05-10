@@ -11,9 +11,10 @@ public class PlaceDaoTest {
 
         System.out.println("test start...");
         // findPlace 테스트
+        String placeId; // ID삽입
         try {
-            Place place = placeDao.findPlaceById();
-            System.out.print(place);
+            Place place = placeDao.findPlaceById("ADMIN1");
+            System.out.print(place.getName() + "," + place.getAddress());
         } catch (SQLException e) {
             e.printStackTrace();
         }
