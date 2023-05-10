@@ -30,9 +30,9 @@ public class PlaceMenu extends Menu implements Serializable {
     public int getMenu_id() {
         return menu_id;
     }
-//    public void setMenu_id(int menu_id) {
-//        this.menu_id = super.menu_id;
-//    }
+    public void setMenu_id(int menu_id) {
+        this.menu_id = menu_id;
+    }
 
     public String getName() {
         return name;
