@@ -28,7 +28,7 @@ import com.example.frogbanchan.domain.Comments;
 
 @Service
 @Transactional
-public class FrogBanchanImpl implements FrogBanchanFacade { 
+public class FrogBanchanImpl implements FrogBanchanFacade {
 	@Autowired
 	private MemberDao memberDao;
 	@Autowired
@@ -48,9 +48,9 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 	@Autowired
 	private CommentsDao commentsDao;
 
-	//-------------------------------------------------------------------------
+	// -------------------------------------------------------------------------
 	// Operation methods, implementing the PetStoreFacade interface
-	//-------------------------------------------------------------------------
+	// -------------------------------------------------------------------------
 
 	// MemberService
 	public void insertMember(Member member) {
@@ -94,32 +94,32 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 		placeDao.updatePlace(place);
 	}
 
-	public void deletePlace(int placeId){
+	public void deletePlace(String placeId) {
 		placeDao.deletePlace(placeId);
 	}
 
-	public Place findPlace(int placeId){
-		return placeDao.findPlace(placeId);
+	public Place findPlace(String placeId) {
+		return placeDao.findPlaceById(placeId);
 	}
 
-	public void insertAvailableTime(int placeId, List<Timestamp> availableTime) {
+	public void insertAvailableTime(String placeId, List<Timestamp> availableTime) {
 		placeDao.insertAvailableTime(placeId, availableTime);
 	}
 
-	public Place findCalendar(int placeId) {
+	public List<Timestamp> findCalendar(String placeId) {
 		return placeDao.findCalendar(placeId);
 	}
 
 	// ReservationService
-	public void insertReservation(Reservation reservation){
+	public void insertReservation(Reservation reservation) {
 		reservationDao.insertReservation(reservation);
 	}
 
-	public Reservation findReservationByUsername(int placeId, String username){
+	public Reservation findReservationByUsername(int placeId, String username) {
 		return reservationDao.findReservationByUsername(placeId, username);
 	}
 
-	public Reservation findReservationByDate(int placeId, Timestamp date){
+	public Reservation findReservationByDate(int placeId, Timestamp date) {
 		return reservationDao.findReservationByDate(placeId, date);
 	}
 
@@ -137,7 +137,7 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 	}
 
 	public List<String> findMenuTags(int menu_id) {
-     	return menuDao.findMenuTags(menu_id);
+		return menuDao.findMenuTags(menu_id);
 	}
 
 	public List<String> findAllTag() {
@@ -168,7 +168,6 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 		placeMenuDao.deletePlaceMenu(place_menu_id);
 	}
 
-	
 	// HistoryService
 	public History findHistory(String username, Timestamp recorded_date) {
 		return historyDao.findHistory(username, recorded_date);
@@ -181,15 +180,14 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 	public void insertHistory(History history) {
 		historyDao.insertHistory(history);
 	}
-	
+
 	public void updateHistory(History history) {
 		historyDao.updateHistory(history);
 	}
-	
+
 	public void deleteHistory(String username, Timestamp recorded_date) {
 		historyDao.deleteHistory(username, recorded_date);
 	}
-
 
 	// TeamService
 	public void insertTeam(Team team) {
@@ -207,7 +205,7 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 	public void deleteTeam(int team_id) {
 		teamDao.deleteTeam(team_id);
 	}
-  
+
 	public void deleteTeamMember(int team_id, String username) {
 		teamDao.deleteTeamMember(team_id, username);
 	}
@@ -219,7 +217,6 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 	public Team findTeam(int team_id) {
 		return teamDao.findTeam(team_id);
 	}
-	
 
 	public List<Team> findTeamList(String username) {
 		return teamDao.findTeamList(username);
@@ -266,6 +263,5 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 	public List<Comments> findCommentList() {
 		return commentsDao.findCommentList();
 	}
-
 
 }
