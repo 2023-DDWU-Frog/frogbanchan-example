@@ -37,7 +37,7 @@ public class PlaceDaoJDBC {
 
     public void insertPlace(Place place) throws SQLException {
         String sql = "INSERT INTO PLACE VALUES";
-        jdbcUtil.setSqlAndParameters(sql, new Object[] { place.getPlaceId(), p }); // JDBCUtil에 query문과 매개 변수 설정
+        jdbcUtil.setSqlAndParameters(sql, new Object[] { place.getPlaceId() }); // JDBCUtil에 query문과 매개 변수 설정
 
         try {
             ResultSet rs = jdbcUtil.executeQuery(); // query 실행
