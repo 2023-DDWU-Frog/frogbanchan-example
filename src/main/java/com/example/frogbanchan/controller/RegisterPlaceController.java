@@ -12,6 +12,7 @@ import com.example.frogbanchan.service.FrogBanchanFacade;
 //servlet-context.xml 파일에 
 //<context:component-scan base-package="패키지이름" /> 추가
 
+//github desktop testttt 0504 1431
 @Controller
 public class RegisterPlaceController {
 
@@ -22,7 +23,7 @@ public class RegisterPlaceController {
 		this.frogbanchan = frogbanchan;
 	}
 
-//	@RequestMapping("/place/register.do")
+// @RequestMapping("/place/register.do")
 //	public ModelAndView handleRequest(
 //			@RequestParam("placeId") String placeId,
 //			@RequestParam("password") String password,
