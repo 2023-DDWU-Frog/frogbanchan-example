@@ -4,7 +4,7 @@ public class Member {
 	private String username;
 	private String password;
 	private String name;
-	private String ninkname;
+	private String nickname;
 	private String phone;
 	private String email;
 	private String residentNo;
@@ -12,12 +12,12 @@ public class Member {
 	
 	public Member() {
 	}
-	public Member(String username, String password, String name, String ninkname, String phone, String email, String residentNo, String address) {
+	public Member(String username, String password, String name, String nickname, String phone, String email, String residentNo, String address) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.name = name;
-		this.ninkname = ninkname;
+		this.nickname = nickname;
 		this.phone = phone;
 		this.email = email;
 		this.residentNo = residentNo;
@@ -42,11 +42,11 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getNinkname() {
-		return ninkname;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setNinkname(String ninkname) {
-		this.ninkname = ninkname;
+	public void setnickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getPhone() {
 		return phone;
@@ -75,7 +75,7 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return "Member [username=" + username + ", password=" + password + ", name=" + name + ", ninkname=" + ninkname
+		return "Member [username=" + username + ", password=" + password + ", name=" + name + ", nickname=" + nickname
 				+ ", phone=" + phone + ", email=" + email + ", residentNo=" + residentNo + ", address=" + address + "]";
 	}
 	
