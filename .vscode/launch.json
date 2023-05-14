@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "jdkpath": "C:\\Program Files\\Java\\jdk-17"
+        },
+        {
+            "type": "java",
+            "name": "MemberDaoTest",
+            "request": "launch",
+            "mainClass": "com.example.frogbanchan.dao.test.MemberDaoTest",
+            "projectName": "frogbanchan",
+            "jdkpath": "C:\\Program Files\\Java\\jdk-17"
+        },
+        {
+            "type": "java",
+            "name": "PlaceDaoTest",
+            "request": "launch",
+            "mainClass": "com.example.frogbanchan.dao.test.PlaceDaoTest",
+            "projectName": "frogbanchan",
+            "jdkpath": "C:\\Program Files\\Java\\jdk-17"
+        },
+        {
+            "type": "java",
+            "name": "TeamDaoTest",
+            "request": "launch",
+            "mainClass": "com.example.frogbanchan.dao.test.TeamDaoTest",
+            "projectName": "frogbanchan",
+            "jdkpath": "C:\\Program Files\\Java\\jdk-17"
+        }
+    ]
+}

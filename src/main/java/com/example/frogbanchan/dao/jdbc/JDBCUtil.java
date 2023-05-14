@@ -128,7 +128,8 @@ public class JDBCUtil {
 		return cstmt.execute();
 	}
 
-	// PK 컬럼 이름 배열을 이용하여 PreparedStatement를 생성 (INSERT문에서 Sequence를 통해 PK 값을 생성하는 경우)
+	// PK 컬럼 이름 배열을 이용하여 PreparedStatement를 생성 (INSERT문에서 Sequence를 통해 PK 값을 생성하는
+	// 경우)
 	private PreparedStatement getPreparedStatement(String[] columnNames) throws SQLException {
 		if (conn == null) {
 			conn = connMan.getConnection();

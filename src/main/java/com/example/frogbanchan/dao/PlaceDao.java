@@ -8,14 +8,14 @@ import com.example.frogbanchan.domain.Place;
 public interface PlaceDao {
 
 	// 사업자 최초가입
-	void insertPlace(Place place) throws DataAccessException;
+	int insertPlace(Place place) throws DataAccessException;
 	/*
 	 * INSERT INTO Place(place_id, password, name, address, menu_list)
 	 * VALUES (#{placeId}, #{password}, #{name}, #{address}, #{menuList})
 	 */
 
 	// 가게수정 : 메뉴, 상호명, 주소 변경
-	Place updatePlace(Place place) throws DataAccessException;
+	int updatePlace(Place place) throws DataAccessException;
 	/*
 	 * UPDATE Place
 	 * SET name = #{name}
@@ -25,7 +25,7 @@ public interface PlaceDao {
 	 */
 
 	// 가게 삭제
-	void deletePlace(String placeId) throws DataAccessException;
+	int deletePlace(String placeId) throws DataAccessException;
 	/*
 	 * DELETE Place
 	 * WHERE place_id = #{placeId}
@@ -39,7 +39,7 @@ public interface PlaceDao {
 	 */
 
 	// 예약 가능 시간 체크
-	void insertAvailableTime(String placeId, List<Timestamp> availableTime) throws DataAccessException;
+	int insertAvailableTime(String placeId, List<Timestamp> availableTime) throws DataAccessException;
 	/*
 	 * insert into Place(place_id, available_time)
 	 * values (#{placeId}, #{availableime})

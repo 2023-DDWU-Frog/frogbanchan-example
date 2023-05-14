@@ -1,5 +1,5 @@
 package com.example.frogbanchan.service;
-  
+
 import java.util.List;
 import java.sql.Timestamp;
 
@@ -14,22 +14,22 @@ import com.example.frogbanchan.domain.Party;
 import com.example.frogbanchan.domain.Comments;
 
 public interface FrogBanchanFacade {
-	
+
 	// MemberService
 	public void insertMember(Member member);
-	
+
 	public void updateMember(Member member);
-	
+
 	public void deleteMember(String username);
-	
+
 	public Member findMemberByUsername(String username);
-	
+
 	public List<Member> findMembersByNickname(String nickname);
-	
+
 	public List<String> findUsernameList();
 
 	public List<Team> findTeamsByUsername(String username);
-	
+
 	public List<Member> findMembersByTeamId(int teamId);
 
 	// PlaceService
@@ -37,13 +37,13 @@ public interface FrogBanchanFacade {
 
 	public void updatePlace(Place place);
 
-	public void deletePlace(int placeId);
+	public void deletePlace(String placeId);
 
-	public Place findPlace(int placeId);
+	public Place findPlaceById(String placeId);
 
-	public void insertAvailableTime(int placeId, List<Timestamp> availableTime);
+	public void insertAvailableTime(String placeId, List<Timestamp> availableTime);
 
-	public Place findCalendar(int placeId);
+	public List<Timestamp> findCalendar(String placeId);
 
 	// ReservationService
 	public void insertReservation(Reservation reservation);
@@ -75,7 +75,7 @@ public interface FrogBanchanFacade {
 	public List<Place> findPlaceListByMenu(int menu_id);
 
 	// HistoryService
- 	public History findHistory(String username, Timestamp recorded_date);
+	public History findHistory(String username, Timestamp recorded_date);
 
 	public List<History> findHistoryListsByUsername(String username);
 
@@ -93,7 +93,7 @@ public interface FrogBanchanFacade {
 	public void addTeamMember(int team_id, String username);
 
 	public void deleteTeam(int team_id);
-  
+
 	public void deleteTeamMember(int team_id, String username);
 
 	public void quitTeam(int team_id);
@@ -106,22 +106,22 @@ public interface FrogBanchanFacade {
 
 	// PartyService
 	public void insertParty(Party party);
-	
+
 	public void deleteParty(int party_id);
-	
+
 	public Party findParty(int party_id);
-	
+
 	public List<Party> findPartyList();
-  
+
 	// CommentsService
 	public void insertComment(Comments comments);
-	
+
 	public void deleteComment(int commentId);
-	
+
 	public Comments findCommentByCommentId(int commentId);
-	
+
 	public List<Comments> findCommentsByPartyId(int partyId);
-	
+
 	public List<Comments> findCommentList();
 
 }
