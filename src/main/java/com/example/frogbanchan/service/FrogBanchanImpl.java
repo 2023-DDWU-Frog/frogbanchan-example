@@ -98,7 +98,7 @@ public class FrogBanchanImpl implements FrogBanchanFacade {
 		placeDao.deletePlace(placeId);
 	}
 
-	public Place findPlace(String placeId) {
+	public Place findPlaceById(String placeId) {
 		return placeDao.findPlaceById(placeId);
 	}
 

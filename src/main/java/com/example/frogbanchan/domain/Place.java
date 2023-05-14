@@ -22,6 +22,13 @@ public class Place {
         this.address = address;
     }
 
+    public Place(String placeId, String password, String name, String address) {
+        this.placeId = placeId;
+        this.password = password;
+        this.name = name;
+        this.address = address;
+    }
+
     public Place(String placeId, String password, String name, String address, double totalScore,
             List<PlaceMenu> menuList, List<Timestamp> availableTime, List<Reservation> reservationList) {
         this.placeId = placeId;

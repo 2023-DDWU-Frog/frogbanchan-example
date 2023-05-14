@@ -15,7 +15,7 @@ import com.example.frogbanchan.domain.Party;
 import com.example.frogbanchan.service.FrogBanchanFacade;
 
 @Controller
-public class CreatePartyController { 
+public class CreatePartyController {
 
 	private FrogBanchanFacade frogbanchan;
 
@@ -24,18 +24,18 @@ public class CreatePartyController {
 		this.frogbanchan = frogbanchan;
 	}
 
-//	@RequestMapping("partyForm")
-//	public PartyForm createTeamForm() {
-//		return new PartyForm();
-//	}
-//	
-//	@RequestMapping("party/create.do")
-//	public String handleRequest(HttpServletRequest request,
-//			@ModelAttribute("partyForm") PartyForm partyForm) {
-//		frogbanchan.insertParty(partyForm.getParty());
-//		ModelAndView mav = new ModelAndView("ViewParty");
-//		mav.addObject("party", partyForm.getParty());
-//		mav.addObject("message", "your party has been created.");
-//		return mav;
-//	}
+	// @RequestMapping("partyForm")
+	// public PartyForm createTeamForm() {
+	// return new PartyForm();
+	// }
+	//
+	// @RequestMapping("party/create.do")
+	// public String handleRequest(HttpServletRequest request,
+	// @ModelAttribute("partyForm") PartyForm partyForm) {
+	// frogbanchan.insertParty(partyForm.getParty());
+	// ModelAndView mav = new ModelAndView("ViewParty");
+	// mav.addObject("party", partyForm.getParty());
+	// mav.addObject("message", "your party has been created.");
+	// return mav;
+	// }
 }
